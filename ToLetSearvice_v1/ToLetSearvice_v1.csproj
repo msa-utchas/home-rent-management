@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{77A6FB6D-B010-46E2-A87D-B87970009558}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ToLetSearvice_v1</RootNamespace>
+    <AssemblyName>ToLetSearvice_v1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bussiness Logic Layer\addDeleteService.cs" />
+    <Compile Include="Bussiness Logic Layer\dataRetriveSearvice.cs" />
+    <Compile Include="Bussiness Logic Layer\emailSearvice.cs" />
+    <Compile Include="Bussiness Logic Layer\postAddService.cs" />
+    <Compile Include="Bussiness Logic Layer\signInService.cs" />
+    <Compile Include="Bussiness Logic Layer\signUpSearvice.cs" />
+    <Compile Include="Bussiness Logic Layer\userProfileUpdateSearvice.cs" />
+    <Compile Include="Data Access Layer\dataAccessService.cs" />
+    <Compile Include="Data Access Layer\getUserData.cs" />
+    <Compile Include="Data Access Layer\rentData.cs" />
+    <Compile Include="Data Access Layer\user.cs" />
+    <Compile Include="Presentation Layer\formAddDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\formAddDetails.Designer.cs">
+      <DependentUpon>formAddDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\formHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\formHome.Designer.cs">
+      <DependentUpon>formHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\formPostAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\formPostAdd.Designer.cs">
+      <DependentUpon>formPostAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\formSearchForRent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\formSearchForRent.Designer.cs">
+      <DependentUpon>formSearchForRent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\formShowRenterAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\formShowRenterAdd.Designer.cs">
+      <DependentUpon>formShowRenterAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\formSignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\formSignIn.Designer.cs">
+      <DependentUpon>formSignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\formSignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\formSignUp.Designer.cs">
+      <DependentUpon>formSignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\formSignUpEmailVerify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\formSignUpEmailVerify.Designer.cs">
+      <DependentUpon>formSignUpEmailVerify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\formUserSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\formUserSettings.Designer.cs">
+      <DependentUpon>formUserSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\userControlRenterAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\userControlRenterAdd.Designer.cs">
+      <DependentUpon>userControlRenterAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\userControlSearchRentAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\userControlSearchRentAdd.Designer.cs">
+      <DependentUpon>userControlSearchRentAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentation Layer\formAddDetails.resx">
+      <DependentUpon>formAddDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\formHome.resx">
+      <DependentUpon>formHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\formPostAdd.resx">
+      <DependentUpon>formPostAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\formSearchForRent.resx">
+      <DependentUpon>formSearchForRent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\formShowRenterAdd.resx">
+      <DependentUpon>formShowRenterAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\formSignIn.resx">
+      <DependentUpon>formSignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\formSignUp.resx">
+      <DependentUpon>formSignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\formSignUpEmailVerify.resx">
+      <DependentUpon>formSignUpEmailVerify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\formUserSettings.resx">
+      <DependentUpon>formUserSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\userControlRenterAdd.resx">
+      <DependentUpon>userControlRenterAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\userControlSearchRentAdd.resx">
+      <DependentUpon>userControlSearchRentAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
